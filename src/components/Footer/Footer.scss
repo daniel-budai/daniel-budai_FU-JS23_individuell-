@@ -1,6 +1,6 @@
 @use "../../sass/utils/variables" as *;
 @use "../../sass/utils/mixins" as *;
 
-div {
-  @include meny-layout;
+.footer-image {
+  @include footer-graphic;
 }
