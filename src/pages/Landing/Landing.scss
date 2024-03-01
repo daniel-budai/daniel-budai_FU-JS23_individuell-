@@ -1,0 +1,19 @@
+@use "../../sass/utils/variables" as *;
+@use "../../sass/utils/mixins" as *;
+
+.landing {
+  @include layout;
+  @include center;
+}
+
+.airbean-logo {
+  position: absolute;
+  margin-left: 9.625rem;
+  margin-bottom: 4.6875rem;
+}
+
+.landing-logo {
+  position: absolute;
+  margin-left: 3.625rem;
+  margin-top: 6.25rem;
+}

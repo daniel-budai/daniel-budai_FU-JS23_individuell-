@@ -1,1 +1,31 @@
 @use "../utils/variables" as *;
+
+@mixin center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin layout {
+  width: 23.438rem;
+  height: 41.688rem;
+  background-color: $airbean-dark-green;
+  margin: auto;
+}
+
+@mixin navigation-options {
+  color: white;
+  font-size: 2rem;
+  list-style-type: none;
+  font-family: $main-font;
+  font-weight: 700;
+  line-height: 2.4rem;
+  margin-left: auto;
+  margin-right: auto;
+}

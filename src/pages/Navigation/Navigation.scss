@@ -1,0 +1,31 @@
+@use "../../sass/utils/variables" as *;
+@use "../../sass/utils/mixins" as *;
+
+.nav {
+  @include layout;
+  @include navigation-options;
+  @include center;
+  background-color: $airbean-brown;
+}
+
+ul {
+  @include navigation-options;
+
+  li {
+    &:hover {
+      color: $airbean-light-green;
+      cursor: pointer;
+    }
+  }
+
+  & > :first-child {
+    margin-left: 2.375rem;
+  }
+}
+
+.line {
+  border-radius: 2px;
+  height: 1px;
+  margin-bottom: 7px;
+  margin-left: 3.438rem;
+}
