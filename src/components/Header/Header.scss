@@ -1,6 +1,2 @@
 @use "../../sass/utils/variables" as *;
 @use "../../sass/utils/mixins" as *;
-
-.header-image {
-  @include header-graphic;
-}

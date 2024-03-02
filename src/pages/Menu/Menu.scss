@@ -1,6 +1,16 @@
 @use "../../sass/utils/variables" as *;
 @use "../../sass/utils/mixins" as *;
 
-div {
+.meny-content {
   @include meny-layout;
+}
+
+.header-menu {
+  margin-left: 37px;
+  margin-top: 58px;
+}
+
+.footer-menu {
+  margin-left: 37px;
+  margin-top: 651px;
 }

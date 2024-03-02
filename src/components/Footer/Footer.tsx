@@ -7,7 +7,7 @@ interface FooterImageProps {
 
 const FooterImage: React.FC<FooterImageProps> = ({ src }) => {
   return (
-    <div className="footer-image">
+    <div className="footer">
       <img src={src} alt="Footer" />
     </div>
   );

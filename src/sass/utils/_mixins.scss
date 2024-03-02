@@ -32,8 +32,9 @@
   background-color: $airbean-pink;
   margin: auto;
 }
+
 @mixin navigation-options {
-  color: white;
+  color: $airbean-white;
   font-size: 2rem;
   list-style-type: none;
   font-family: $main-font;
@@ -43,12 +44,17 @@
   margin-right: auto;
 }
 
-@mixin header-graphic {
-  margin-left: -37px;
-  margin-top: -60px;
-}
+@mixin hamburger-menu {
+  background-color: $airbean-white;
+  width: 48px;
+  height: 48px;
+  position: relative;
+  z-index: 9999;
+  border-radius: 50%;
+  cursor: pointer;
 
-@mixin footer-graphic {
-  margin-left: -37px;
-  margin-top: 51px;
+  &:hover {
+    transform: scale(1.05);
+    opacity: 0.88;
+  }
 }

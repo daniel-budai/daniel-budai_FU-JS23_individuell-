@@ -7,7 +7,7 @@ interface HeaderImageProps {
 
 const HeaderImage: React.FC<HeaderImageProps> = ({ src }) => {
   return (
-    <div className="header-image">
+    <div className="header">
       <img src={src} alt="Header" />
     </div>
   );

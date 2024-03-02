@@ -1,0 +1,11 @@
+@use "../../sass/utils/variables" as *;
+@use "../../sass/utils/mixins" as *;
+
+.navicon {
+  @include hamburger-menu;
+}
+
+.hamburger-menu {
+  margin-top: -53px;
+  margin-left: -18px;
+}

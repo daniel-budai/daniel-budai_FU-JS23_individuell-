@@ -2,11 +2,13 @@ import React from "react";
 import "./About.scss";
 import HeaderImage from "../../components/Header/Header";
 import FooterImage from "../../components/Footer/Footer";
+import HamburgerMenu from "../../components/HamburgerMenu/HamburgerMenu";
 
 const About: React.FC = () => {
   return (
     <>
       <article className="about-container">
+        <HamburgerMenu />
         <HeaderImage src="./src/assets/graphic-header.svg" />
         <h1>Vårt kaffe</h1>
         <p>
