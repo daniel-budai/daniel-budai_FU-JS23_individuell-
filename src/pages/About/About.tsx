@@ -3,12 +3,14 @@ import "./About.scss";
 import HeaderImage from "../../components/Header/Header";
 import FooterImage from "../../components/Footer/Footer";
 import HamburgerMenu from "../../components/HamburgerMenu/HamburgerMenu";
+import Cart from "../../components/Cart/Cart";
 
 const About: React.FC = () => {
   return (
     <>
       <article className="about-container">
         <HamburgerMenu />
+        <Cart />
         <HeaderImage src="./src/assets/graphic-header.svg" />
         <h1>Vårt kaffe</h1>
         <p>

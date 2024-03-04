@@ -58,3 +58,23 @@
     opacity: 0.88;
   }
 }
+
+@mixin bag {
+  position: relative;
+  z-index: 9999;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+    opacity: 0.88;
+  }
+}
+
+@mixin add-button {
+  background-color: $airbean-brown;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+}

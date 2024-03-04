@@ -1,0 +1,11 @@
+@use "../../sass/utils/variables" as *;
+@use "../../sass/utils/mixins" as *;
+
+.bag {
+  @include bag;
+}
+
+.cart {
+  margin-top: -66px;
+  margin-left: 250px;
+}
