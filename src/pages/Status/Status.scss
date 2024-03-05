@@ -1,0 +1,49 @@
+@use "../../sass/utils/variables" as *;
+@use "../../sass/utils/mixins" as *;
+
+.status-page {
+  @include status-page-layout;
+  @include flex-center-column;
+  > * {
+    margin-bottom: 50px; // Adjust as needed
+    text-align: center;
+  }
+}
+
+.status-ordernumber {
+  font-family: $secondary-font;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  color: $airbean-white-fade;
+  span {
+    font-weight: 700;
+    color: $airbean-white-fade;
+  }
+}
+
+.order-text {
+  font-family: $main-font;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43.2px;
+  color: $airbean-white;
+}
+
+.minutes {
+  font-family: $secondary-font;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 25px;
+  color: $airbean-white;
+  span {
+    font-weight: 700;
+    color: $airbean-white;
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+
+.confirm-button {
+  @include confirm-button;
+}

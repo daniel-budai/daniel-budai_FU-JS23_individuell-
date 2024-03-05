@@ -12,6 +12,13 @@
   align-items: center;
 }
 
+@mixin flex-center-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 @mixin layout {
   width: 23.438rem;
   height: 41.688rem;
@@ -30,6 +37,19 @@
   width: 375px;
   height: 839px;
   background-color: $airbean-pink;
+  margin: auto;
+}
+
+@mixin your-order-layout {
+  background-color: $airbean-white;
+  width: 341px;
+  height: 575.06px;
+}
+
+@mixin status-page-layout {
+  width: 375px;
+  height: 667px;
+  background-color: $airbearn-orange;
   margin: auto;
 }
 
@@ -77,4 +97,22 @@
   height: 32px;
   border-radius: 50%;
   border: none;
+  cursor: pointer;
+
+  &:active {
+    background-color: $airbearn-orange;
+  }
+}
+
+@mixin confirm-button {
+  background-color: $airbean-white;
+  color: $airbean-brown;
+  font-family: $main-font;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.8px;
+  width: 184px;
+  height: 55px;
+  border: none;
+  border-radius: 60px;
 }
