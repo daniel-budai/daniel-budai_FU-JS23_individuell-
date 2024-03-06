@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./Cart.scss";
 import CartPage from "../../pages/CartPage/CartPage";
 import { useStore } from "../../store/store";
+
 const Cart: React.FC = () => {
   const [showCart, setShowCart] = useState(false);
   const getTotalQuantity = useStore((state) => state.getTotalQuantity);
@@ -20,8 +21,9 @@ const Cart: React.FC = () => {
         onClick={handleClick}
       />
       {getTotalQuantity() > 0 && <span>{getTotalQuantity()}</span>}{" "}
+      {showCart && <div className="overlay"></div>} {/* Add this line */}
       {showCart && <CartPage close={() => setShowCart(false)} />}
-    </div> //fixa later
+    </div>
   );
 };
 

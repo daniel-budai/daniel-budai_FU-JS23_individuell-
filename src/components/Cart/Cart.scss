@@ -24,3 +24,14 @@
     z-index: 9999; // Add this line
   }
 }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 444px;
+  right: 150px;
+  width: calc(55% - 320px);
+  height: 100%;
+  background-color: $airbean-overlay;
+  z-index: 999;
+}
