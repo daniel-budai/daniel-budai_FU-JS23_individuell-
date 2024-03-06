@@ -1,14 +1,16 @@
+// MenuPage.tsx
 import React, { useEffect, useState } from "react";
 import "./Menu.scss";
-
 import HeaderImage from "../../components/Header/Header";
 import FooterImage from "../../components/Footer/Footer";
-import HamburgerMenu from "../../components/HamburgerMenu/HamburgerMenu"; // Import HamburgerMenu
-import Cart from "../../components/Cart/Cart"; // Import Cart
+import HamburgerMenu from "../../components/HamburgerMenu/HamburgerMenu";
+import Cart from "../../components/Cart/Cart";
 import { Menu } from "../../types/menu";
+import { useStore } from "../../store/store";
 
 const MenuPage: React.FC = () => {
   const [menu, setMenu] = useState<Menu[]>([]);
+  const { addItem } = useStore();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,7 +22,7 @@ const MenuPage: React.FC = () => {
 
         const data = await response.json();
 
-        setMenu(data.menu);
+        setMenu(data.menu); //validera responsen, typa
       } catch (error) {
         console.log(error);
       }
@@ -37,12 +39,13 @@ const MenuPage: React.FC = () => {
           <Cart />
           <HeaderImage src="./src/assets/graphic-header.svg" />
         </div>
+
         <h1 className="meny-title">Meny</h1>
         <div className="menu-list">
           {menu.map((item) => (
             <div key={item.id}>
               <div className="title-price">
-                <button className="add-button">
+                <button className="add-button" onClick={() => addItem(item)}>
                   <img src="./src/assets/+.svg" alt="Add" />
                 </button>
                 <div>
