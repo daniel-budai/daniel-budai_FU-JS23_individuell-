@@ -1,4 +1,3 @@
-// MenuPage.tsx
 import React, { useEffect, useState } from "react";
 import "./Menu.scss";
 import HeaderImage from "../../components/Header/Header";
@@ -7,6 +6,8 @@ import HamburgerMenu from "../../components/HamburgerMenu/HamburgerMenu";
 import Cart from "../../components/Cart/Cart";
 import { Menu } from "../../types/menu";
 import { useStore } from "../../store/store";
+import headerImage from "../../assets/graphic-header.svg";
+import footerImage from "../../assets/graphic-footer.svg";
 
 const MenuPage: React.FC = () => {
   const [menu, setMenu] = useState<Menu[]>([]);
@@ -22,7 +23,7 @@ const MenuPage: React.FC = () => {
 
         const data = await response.json();
 
-        setMenu(data.menu); //validera responsen, typa
+        setMenu(data.menu);
       } catch (error) {
         console.log(error);
       }
@@ -33,32 +34,36 @@ const MenuPage: React.FC = () => {
 
   return (
     <>
-      <div className="meny-content">
-        <div className="header-menu">
+      <div className="menu__content">
+        <div className="menu__header">
           <HamburgerMenu />
           <Cart />
-          <HeaderImage src="./src/assets/graphic-header.svg" />
+          <HeaderImage src={headerImage} />
         </div>
-
-        <h1 className="meny-title">Meny</h1>
-        <div className="menu-list">
+        <h1 className="menu__title">Meny</h1>
+        <div className="menu__list">
           {menu.map((item) => (
-            <div key={item.id}>
-              <div className="title-price">
-                <button className="add-button" onClick={() => addItem(item)}>
-                  <img src="./src/assets/+.svg" alt="Add" />
-                </button>
-                <div>
-                  <h2>{item.title} </h2>
-                  <span>{item.desc}</span>
-                </div>
-                <span>{item.price}</span>
+            <div key={item.id} className="menu__item">
+              <button
+                className="menu__add-button"
+                onClick={() => addItem(item)}
+              >
+                <img
+                  src="./src/assets/+.svg"
+                  alt="Add"
+                  className="menu__add-button__img"
+                />
+              </button>
+              <div>
+                <h2 className="menu__item__title">{item.title} </h2>
+                <span className="menu__item__desc">{item.desc}</span>
               </div>
+              <span className="menu__item__price">{item.price}</span>
             </div>
           ))}
         </div>
-        <div className="footer-menu">
-          <FooterImage src="./src/assets/graphic-footer.svg" />
+        <div className="menu__footer">
+          <FooterImage src={footerImage} />
         </div>
       </div>
     </>

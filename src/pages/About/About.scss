@@ -1,66 +1,69 @@
 @use "../../sass/utils/variables" as *;
 @use "../../sass/utils/mixins" as *;
 
-.about-container {
+.about {
   @include about-layout;
-  padding: 60px 2.3rem;
-}
+  padding: 3.75rem 2.3rem;
 
-h1 {
-  color: $airbean-brown;
-  font-family: $main-font;
-  font-weight: 700;
-  font-size: 42px;
-  margin-top: 20px;
-}
+  &__title {
+    color: $airbean-brown;
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 2.625rem;
+    margin-top: 1.25rem;
+  }
 
-b {
-  color: $airbean-brown;
-  font-family: $secondary-font;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 10px;
-  line-height: 22.4px;
-}
+  &__description {
+    color: $airbean-brown;
+    font-family: $secondary-font;
+    font-size: 0.75rem;
+    line-height: 1.2rem;
 
-p {
-  color: $airbean-brown;
-  font-family: $secondary-font;
-  font-size: 12px;
-  line-height: 19.2px;
-}
+    b {
+      font-weight: 600;
+      font-size: 0.875rem;
+      line-height: 1.4rem;
+    }
 
-.profile-pic-container {
-  @include flex-center;
-  flex-direction: column;
-  margin-top: 60px;
-}
+    small {
+      font-weight: 400;
+      font-size: 0.75rem;
+      line-height: 1.2rem;
+    }
+  }
 
-.profile-pic {
-  border-radius: 50%;
-}
+  &__profile {
+    @include flex-center;
+    flex-direction: column;
+    margin-top: 3.75rem;
 
-h3 {
-  color: $airbean-brown;
-  font-family: $main-font;
-  font-weight: 700;
-  font-size: 22px;
-  margin-top: 10px;
-}
+    &-pic {
+      border-radius: 50%;
+    }
 
-p small {
-  font-family: $secondary-font;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 19.2px;
-}
+    &-name {
+      color: $airbean-brown;
+      font-family: $main-font;
+      font-weight: 700;
+      font-size: 1.375rem;
+      margin-top: 0.625rem;
+    }
 
-.header {
-  margin-top: -89px;
-  margin-left: -37px;
-}
+    &-title {
+      font-family: $secondary-font;
+      font-weight: 400;
+      font-size: 0.75rem;
+      line-height: 1.2rem;
+    }
+  }
 
-.footer {
-  margin-top: 82px;
-  margin-left: -37px;
+  &__header {
+    margin-top: -4.125rem;
+    margin-left: -2.313rem;
+  }
+
+  &__footer {
+    margin-top: 3.5rem;
+    margin-left: -2.313rem;
+  }
 }

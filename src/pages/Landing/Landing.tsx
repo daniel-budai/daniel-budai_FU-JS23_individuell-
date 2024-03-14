@@ -16,10 +16,10 @@ const Landing: React.FC = () => {
         src="./src/assets/graphic-left.svg"
         alt="left"
       />
-      <div className="airbean-logo">
+      <div className="landing__airbean-logo">
         <img src="./src/assets/airbean-icon.svg" alt="airbean-logo" />
       </div>
-      <div className="landing-logo">
+      <div className="landing__landing-logo">
         <img src="./src/assets/group 1.svg" alt="airbean-logo" />
       </div>
       <img

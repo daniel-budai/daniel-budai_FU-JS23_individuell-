@@ -3,57 +3,60 @@
 
 .cart-page {
   @include cart-page-layout;
-  .dotted-line {
-    margin-top: 15px;
-    margin-left: -35px;
-    width: 151px;
+
+  &__dotted-line {
+    margin-top: 0.938rem;
+    margin-left: -2.188rem;
+    width: 9.438rem;
   }
-}
-.title-in-cart-page {
-  color: $airbean-brown;
-  font-family: $main-font;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 38.4px;
-  text-align: center;
-  margin-bottom: 30px;
-}
 
-.item-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  h2 {
-    font-family: $main-font;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 24px;
-  }
-}
-
-.counter {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.total {
-  font-family: $main-font;
-  font-weight: 700;
-  font-size: 23px;
-  line-height: 27.6px;
-  margin-top: 90px;
-  margin-bottom: 40px;
-
-  p {
+  &__title {
     color: $airbean-brown;
     font-family: $main-font;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 19.2px;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    text-align: center;
+    margin-bottom: 1.875rem;
   }
-}
 
-.cart-page-button {
-  @include card-page-button;
+  &__item-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__title {
+      font-family: $main-font;
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.5rem;
+    }
+  }
+
+  &__counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__total {
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 1.438rem;
+    line-height: 1.725rem;
+    margin-top: 5.625rem;
+    margin-bottom: 2.5rem;
+
+    &__text {
+      color: $airbean-brown;
+      font-family: $main-font;
+      font-weight: 400;
+      font-size: 0.75rem;
+      line-height: 1.2rem;
+    }
+  }
+
+  &__button {
+    @include card-page-button;
+  }
 }

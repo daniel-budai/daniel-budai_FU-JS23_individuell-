@@ -1,4 +1,3 @@
-// store.ts
 import { create } from "zustand";
 import { Menu } from "../types/menu";
 
@@ -20,7 +19,6 @@ type State = {
 };
 
 export const useStore = create<State>()((set, get) => ({
-  bears: 0,
   items: [],
   addItem: (menu) =>
     set((state) => {

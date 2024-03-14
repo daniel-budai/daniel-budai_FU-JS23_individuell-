@@ -1,0 +1,97 @@
+@use "../../sass/utils/variables" as *;
+@use "../../sass/utils/mixins" as *;
+
+.profile-page {
+  @include status-page-log-in;
+  @include flex-center-column;
+
+  .hamburger-menu {
+    z-index: 9999;
+    position: absolute;
+    margin-top: -36.688rem;
+    margin-right: 15.75rem;
+  }
+
+  .header {
+    margin-top: -3.563rem;
+  }
+
+  &__profile-name {
+    color: $airbean-white;
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    text-align: center;
+  }
+
+  &__profile-email {
+    color: $airbean-white-fade;
+    font-family: $secondary-font;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.05rem;
+  }
+
+  &__order-info-container {
+    margin-top: 5.313rem;
+  }
+
+  &__order-date {
+    font-family: $secondary-font;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.05rem;
+    color: $airbean-white-fade;
+  }
+
+  &__order-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 8.75rem;
+
+    &--order-id {
+      color: #ffffffb2;
+      font-family: $secondary-font;
+      font-weight: 700;
+      font-size: 0.875rem;
+      line-height: 1.05rem;
+    }
+  }
+
+  &__order-history {
+    font-family: $main-font;
+    font-weight: 700;
+    color: $airbean-white;
+    margin-bottom: 0.625rem;
+    margin-left: 0.625rem;
+  }
+
+  &__total-order-sum {
+    font-size: 0.75rem;
+    font-family: $secondary-font;
+    color: $airbean-white-dark-fade;
+    gap: 11.688rem;
+    display: flex;
+  }
+
+  &__previous-order-list {
+    margin: 0.75rem;
+  }
+
+  &__total-spent {
+    font-family: $secondary-font;
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 1.05rem;
+    color: $airbean-white;
+    gap: 10.625rem;
+    display: flex;
+    margin: 0.75rem;
+  }
+
+  hr {
+    margin-top: 5px;
+    color: $airbean-hr-color;
+  }
+}

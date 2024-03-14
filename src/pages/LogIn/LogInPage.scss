@@ -1,0 +1,74 @@
+@use "../../sass/utils/variables" as *;
+@use "../../sass/utils/mixins" as *;
+
+.login {
+  &__overlay {
+    @include status-page-log-in;
+  }
+
+  &__content {
+    @include log-in-page-layout;
+  }
+
+  .hamburger-menu {
+    margin-top: 5px;
+    margin-left: 2rem;
+    z-index: 9999;
+    position: absolute;
+  }
+
+  &__image {
+    margin-top: -18.75rem;
+  }
+
+  &__title {
+    color: $airbean-light-brown;
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 1.25rem;
+    text-align: center;
+  }
+
+  &__text {
+    color: $airbean-light-brown-fade;
+    font-family: $secondary-font;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    text-align: center;
+    margin-bottom: 0.938rem;
+  }
+
+  &__form {
+    @include log-in-page-form;
+  }
+
+  &__input {
+    @include log-in-page-form;
+  }
+
+  &__gdpr-label {
+    font-family: $secondary-font;
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 0.9rem;
+    color: $airbean-brown;
+    margin-top: 0.625rem;
+    display: block;
+  }
+
+  &__gdpr-confirm:checked {
+    accent-color: $airbean-dark-green;
+  }
+
+  &__gdpr-confirm {
+    margin-right: 5px;
+  }
+
+  &__button {
+    @include card-page-button;
+    position: relative;
+    top: 2.188rem;
+    left: 0.813rem;
+  }
+}

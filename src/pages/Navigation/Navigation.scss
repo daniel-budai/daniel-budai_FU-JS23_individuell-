@@ -6,26 +6,26 @@
   @include navigation-options;
   @include center;
   background-color: $airbean-brown;
-}
 
-ul {
-  @include navigation-options;
+  &__list {
+    @include navigation-options;
 
-  li {
-    &:hover {
-      color: $airbean-light-green;
-      cursor: pointer;
+    &__item {
+      &:hover {
+        color: $airbean-light-green;
+        cursor: pointer;
+      }
+
+      &:first-child {
+        margin-left: 2.375rem;
+      }
+    }
+
+    &__line {
+      border-radius: 2px;
+      height: 1px;
+      margin-bottom: 7px;
+      margin-left: 3.438rem;
     }
   }
-
-  & > :first-child {
-    margin-left: 2.375rem;
-  }
-}
-
-.line {
-  border-radius: 2px;
-  height: 1px;
-  margin-bottom: 7px;
-  margin-left: 3.438rem;
 }

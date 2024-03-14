@@ -1,10 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useUserStore } from "../../store/userStore";
 import "./Status.scss";
 import drone from "../../assets/drone.svg";
 
 const StatusPage: React.FC = () => {
   const navigate = useNavigate();
+  const orderHistory = useUserStore((state) => state.orderHistory);
+  const latestOrder = orderHistory[orderHistory.length - 1];
 
   const handleClick = () => {
     navigate("/navigation");
@@ -13,7 +16,7 @@ const StatusPage: React.FC = () => {
   return (
     <div className="status-page">
       <p className="status-ordernumber">
-        Ordernummer: <span>#12DV23F</span>
+        Ordernummer: <span>{latestOrder?.id || ""}</span>{" "}
       </p>
       <img src={drone} alt="drone" />
       <h1 className="order-text">

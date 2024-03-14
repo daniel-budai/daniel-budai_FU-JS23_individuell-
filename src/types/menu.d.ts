@@ -4,5 +4,3 @@ export interface Menu {
   desc: string;
   price: number;
 }
-
-//store type

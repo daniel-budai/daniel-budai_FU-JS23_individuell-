@@ -4,16 +4,24 @@ import HeaderImage from "../../components/Header/Header";
 import FooterImage from "../../components/Footer/Footer";
 import HamburgerMenu from "../../components/HamburgerMenu/HamburgerMenu";
 import Cart from "../../components/Cart/Cart";
+import headerImage from "../../assets/graphic-header.svg";
+import footerImage from "../../assets/graphic-footer.svg";
 
 const About: React.FC = () => {
   return (
     <>
-      <article className="about-container">
-        <HamburgerMenu />
-        <Cart />
-        <HeaderImage src="./src/assets/graphic-header.svg" />
-        <h1>Vårt kaffe</h1>
-        <p>
+      <article className="about">
+        <div className="about__menu">
+          <HamburgerMenu />
+        </div>
+        <div className="about__cart">
+          <Cart />
+        </div>
+        <div className="about__header">
+          <HeaderImage src={headerImage} />
+        </div>
+        <h1 className="about__title">Vårt kaffe</h1>
+        <p className="about__description">
           <b>
             Pumpkin spice mug, barista cup, sit macchiato, kopi-luwak, doppio,
             grounds dripper, crema, strong whipped, variety extra iced id lungo
@@ -21,7 +29,7 @@ const About: React.FC = () => {
           </b>
         </p>
         <br />
-        <p>
+        <p className="about__description">
           Que dark fair trade, spoon decaffeinated, barista wings whipped, as
           rich aftertaste, con panna milk black, arabica white rich beans single
           shot extra affogato. So affogato macchiato sit extraction instant
@@ -32,7 +40,7 @@ const About: React.FC = () => {
           kopi-luwak.
         </p>
         <br />
-        <p>
+        <p className="about__description">
           Roast id macchiato, single shot siphon mazagran milk fair trade est
           aroma a half and half and, so, galão iced to go, whipped as cream cup
           pumpkin spice iced. At extra, rich grinder, brewed to go, steamed half
@@ -42,18 +50,20 @@ const About: React.FC = () => {
           affogato viennese cultivar aftertaste, seasonal, percolator cream
           black, galão flavour, milk aromatic turkish skinny crema.
         </p>
-        <section className="profile-pic-container">
+        <section className="about__profile">
           <img
             src="./src/assets/eva-cortado.jpg"
             alt=""
-            className="profile-pic"
+            className="about__profile-pic"
           />
-          <h3>Eva Cortado</h3>
-          <p>
+          <h3 className="about__profile-name">Eva Cortado</h3>
+          <p className="about__profile-title">
             <small>VD & Grundare</small>
           </p>
         </section>
-        <FooterImage src="./src/assets/graphic-footer.svg" />
+        <div className="about__footer">
+          <FooterImage src={footerImage} />
+        </div>
       </article>
     </>
   );

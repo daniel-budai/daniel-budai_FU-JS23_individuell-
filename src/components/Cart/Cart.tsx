@@ -21,7 +21,7 @@ const Cart: React.FC = () => {
         onClick={handleClick}
       />
       {getTotalQuantity() > 0 && <span>{getTotalQuantity()}</span>}{" "}
-      {showCart && <div className="overlay"></div>} {/* Add this line */}
+      {showCart && <div className="overlay"></div>}
       {showCart && <CartPage close={() => setShowCart(false)} />}
     </div>
   );
